@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Poppins:wght@300;700&family=Roboto+Mono:ital,wght@1,500&display=swap');
+
+
+nav {
+  background: #1a95fa;
+  padding: 5px;
+
+  .menuItems {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin: 5px 50px;
+
+      a {
+        text-decoration: none;
+        color: #0c0000;
+        font-size: 20px;
+        position: relative;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+
+        &:hover {
+
+          width: 100%;
+          color: #faf9f7;
+
+        }
+
+        &:active {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+button {
+  align-self: center;
+  border: 0;
+  background: #0087cc;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #006599;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  padding: 2px 4px;
+  transition: all .1s linear;
+}
+
+button:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+
+table {
+  border-collapse: collapse;
+
+  thead,
+  th,
+  td,
+  tr {
+    padding: 5px 10px;
+    border: 2px solid black;
+  }
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 12453;
+  inherits: false;
+}
+
+@property --num1 {
+  syntax: "<integer>";
+  initial-value: 12453;
+  inherits: false;
+}
+
+.user-count1 {
+  padding: 0px 40px;
+  font-size: 20px;
+  animation: counter 2.5s 1 alternate ease-in-out;
+  counter-reset: num var(--num);
+  font: 800 40px system-ui;
+
+}
+
+.user-count1::after {
+  content: counter(num);
+}
+
+.user-count2 {
+  padding: 0px 40px;
+  font-size: 20px;
+  animation: counter 2.5s 1 alternate ease-in-out;
+  counter-reset: num var(--num);
+  font: 800 40px system-ui;
+
+}
+
+.user-count2::after {
+  content: counter(num);
+}
+
+.user-count3 {
+  padding: 0px 40px;
+  font-size: 20px;
+  animation: counter 2.5s 1 alternate ease-in-out;
+  counter-reset: num var(--num);
+  font: 800 40px system-ui;
+
+}
+
+.user-count3::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+}
